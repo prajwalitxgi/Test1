@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard | Enterprise Portal</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <style>
+    body { background-color: #28243d; color: #dbdade; padding-left: 300px; }
+    header, main, footer { padding-left: 300px; }
+    @media only screen and (max-width : 992px) {
+      header, main, footer, body { padding-left: 0; }
+    }
+    .sidenav { background-color: #2f2b48; border-right: 1px solid #444059; }
+    .sidenav li > a { color: #dbdade; }
+    .card { background-color: #2f2b48; border-radius: 8px; }
+  </style>
+</head>
+<body>
+
+  <!-- Side Navigation -->
+  <ul id="slide-out" class="sidenav sidenav-fixed">
+    <li>
+      <div class="user-view">
+        <div class="background indigo darken-4"></div>
+        <a href="#user"><i class="material-icons large white-text">account_circle</i></a>
+        <a href="#name"><span class="white-text name">Admin User</span></a>
+        <a href="#email"><span class="white-text email">admin@enterprise.com</span></a>
+      </div>
+    </li>
+    <li><a href="index.html" class="waves-effect"><i class="material-icons white-text">home</i>Home</a></li>
+    <li><a href="#!" class="waves-effect"><i class="material-icons white-text">settings</i>Settings</a></li>
+    <li><div class="divider" style="background-color: #444059;"></div></li>
+    <li><a class="subheader grey-text">Reports</a></li>
+    <li><a class="waves-effect" href="#!">Monthly Audit</a></li>
+  </ul>
+
+  <!-- Main Content -->
+  <main>
+    <nav class="transparent z-depth-0" style="margin-top: 10px;">
+      <div class="nav-wrapper container">
+        <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+        <span class="brand-logo hide-on-med-and-down">System Dashboard</span>
+      </div>
+    </nav>
+
+    <div class="container" style="margin-top: 50px;">
+      <div class="row">
+        <!-- Sample Card -->
+        <div class="col s12 m6 l4">
+          <div class="card">
+            <div class="card-content white-text">
+              <span class="card-title">Analytics</span>
+              <p>System performance is currently at 98% efficiency.</p>
+            </div>
+            <div class="card-action">
+              <a href="#" class="indigo-text text-lighten-4">View Full Report</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var elems = document.querySelectorAll('.sidenav');
+      var instances = M.Sidenav.init(elems);
+    });
+  </script>
+</body>
+</html>
